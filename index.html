@@ -133,6 +133,11 @@
         if (!localStorage.getItem('driverSeen')) {
             aktifkandriver();
         }
+        if (!sessionStorage.getItem('driverSeen')) {
+    aktifkandriver();
+    sessionStorage.setItem('driverSeen', 'true');
+}
+
     </script>
 </body>
 
