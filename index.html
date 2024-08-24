@@ -112,6 +112,7 @@
     <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
     <script src="src/javascript.js"></script>
     <script>
+        function aktifkandriver(){
         const driver = window.driver.js.driver;
         const driverObj = driver({
             overlayColor: 'blue',
@@ -126,18 +127,12 @@
                 { element: '#toggle-bg', popover: { title: 'Dark Mode', description: 'Mengubah mode website menjadi mode malam atau sebaliknya', side: 'top', align: 'end' } }
             ]
         });
-        function aktifkandriver(){
             driverObj.drive();
             localStorage.setItem('driverSeen', 'true');
         }
         if (!localStorage.getItem('driverSeen')) {
             aktifkandriver();
         }
-        if (!sessionStorage.getItem('driverSeen')) {
-    aktifkandriver();
-    sessionStorage.setItem('driverSeen', 'true');
-}
-
     </script>
 </body>
 
