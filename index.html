@@ -83,7 +83,7 @@
             <i class='bx bx-trash'></i>
         </button>
     </div>
-    <div onclick="aktifkandriver()">
+    <div>
         <section
             class="flex drawing-area  max-w-4xl md:justify-between md:grid md:grid-cols-2 -mt-20 flex-col items-center justify-center mx-auto min-h-screen px-4 animate__animated animate__fadeIn animate__fadeInUp">
             <canvas id="drawingCanvas" class="w-full h-full drawing-canvas "></canvas>
@@ -112,7 +112,6 @@
     <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
     <script src="src/javascript.js"></script>
     <script>
-        function aktifkandriver(){
         const driver = window.driver.js.driver;
         const driverObj = driver({
             overlayColor: 'blue',
@@ -129,7 +128,7 @@
         });
             driverObj.drive();
             localStorage.setItem('driverSeen', 'true');
-        }
+        
         if (!localStorage.getItem('driverSeen')) {
             aktifkandriver();
         }
